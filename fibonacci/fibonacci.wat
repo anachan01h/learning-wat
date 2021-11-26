@@ -23,19 +23,16 @@
         local.set $f1
 
         local.get $rcx
-        i32.eqz
+        i32.const 0
+        i32.gt_u
         if
-            nop
-        else
             i32.const 1
             local.set $f1
             
             local.get $rcx
             i32.const 1
-            i32.le_u
+            i32.gt_u
             if
-                nop
-            else
                 loop $loop
                     local.get $f0
                     local.get $f1
