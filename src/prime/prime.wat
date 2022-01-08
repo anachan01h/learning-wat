@@ -5,12 +5,12 @@
 ;; ----------------------------------------------------------------------------
 
 (import "js" "arg1" (global $arg1 i32))
-(import "js" "log" (func $log (param i32)))
+(import "js" "nwrite" (func $nwrite (param i32)))
 (start $_start)
 (func $_start
     global.get $arg1
     call $prime
-    call $log
+    call $nwrite
 )
 (func $prime (param $p i32) (result i32)
     (local $ax i32)

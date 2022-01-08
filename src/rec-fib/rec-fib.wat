@@ -6,12 +6,12 @@
 
 (module
     (import "js" "arg1" (global $arg1 i32))
-    (import "js" "log" (func $log (param i32)))
+    (import "js" "nwrite" (func $nwrite (param i32)))
     (start $_start)
     (func $_start
         global.get $arg1
         call $rec-fib
-        call $log
+        call $nwrite
     )
     (func $rec-fib (param $n i32) (result i32)
         (local $f i32)

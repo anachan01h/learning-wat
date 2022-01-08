@@ -5,12 +5,12 @@
 ;; ----------------------------------------------------------------------------
 
 (module
-    (import "js" "log" (func $log (param i32)))
+    (import "js" "nwrite" (func $nwrite (param i32)))
     (start $_start)
     (func $_start
         call $limit-fib
-        call $log
-        call $log
+        call $nwrite
+        call $nwrite
     )
     (func $limit-fib (result i32 i32)
         (local $f0 i32)

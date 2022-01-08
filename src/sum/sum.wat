@@ -1,17 +1,19 @@
-;; # sum.wat
-;; Calculates the sum of the first n natural numbers
+;; ----------------------------------------------------------------------------
+;; ### Sum (sum.wat)
+;; Calculates the sum of the first n natural numbers.
 ;; By: anachan01h
+;; ----------------------------------------------------------------------------
 
 (module
-    (import "js" "var1" (global $var1 i32))
-    (import "js" "log" (func $log (param i32)))
+    (import "js" "arg1" (global $arg1 i32))
+    (import "js" "nwrite" (func $nwrite (param i32)))
     (start $_start)
     (func $_start
-        global.get $var1
+        global.get $arg1
         call $sum
-        call $log
+        call $nwrite
     )
-    (func $sum (export "sum") (param $n i32) (result i32)
+    (func $sum (param $n i32) (result i32)
         (local $s i32)
         (local $i i32)
         i32.const 0
