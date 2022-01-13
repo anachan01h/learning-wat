@@ -97,3 +97,14 @@ article#terminal button:hover {
     background-color: #888;
     color: #000;
 }
+
+/* Terminal Canvas */
+article#terminal canvas {
+    border: 2px solid #888;
+}
+
+@media screen and (max-width: 600px) {
+    article#terminal canvas {
+        width: 100%;
+    }
+}
